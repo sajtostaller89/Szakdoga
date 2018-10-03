@@ -1,0 +1,73 @@
+%implements s0_b0_10mgo_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS0B0 = OpaqueTLCBlockFcn("Start", 0, 0, 0, 1)
+%assign tlcStartFcnOfS0B1 = OpaqueTLCBlockFcn("Start", 0, 1, 0, 1)
+%assign tlcStartFcnOfS0B2 = OpaqueTLCBlockFcn("Start", 0, 2, 0, 1)
+%assign tlcStartFcnOfS0B3 = OpaqueTLCBlockFcn("Start", 0, 3, 0, 1)
+%assign tlcStartFcnOfS0B4 = OpaqueTLCBlockFcn("Start", 0, 4, 0, 1)
+%assign tlcStartFcnOfS0B5 = OpaqueTLCBlockFcn("Start", 0, 5, 0, 1)
+%assign tlcStartFcnOfS0B6 = OpaqueTLCBlockFcn("Start", 0, 6, 0, 1)
+%assign tlcStartFcnOfS0B7 = OpaqueTLCBlockFcn("Start", 0, 7, 0, 1)
+%assign tlcStartFcnOfS0B8 = OpaqueTLCBlockFcn("Start", 0, 8, 0, 1)
+%assign tlcStartFcnOfS0B9 = OpaqueTLCBlockFcn("Start", 0, 9, 0, 1)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<SLibCGIRDumpSystemUserCode(0, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(0, "Start", "Body")>\
+%if !WHITE_SPACE(tlcStartFcnOfS0B0)
+/* Start for S-Function (c2802xadc): '<Root>/ADC' */
+%<SLibCG_DumpSSCode("/*@[1398*/",tlcStartFcnOfS0B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B1)
+/* Start for S-Function (c2802xadc): '<Root>/ADC1' */
+%<SLibCG_DumpSSCode("/*@[139a*/",tlcStartFcnOfS0B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B2)
+/* Start for S-Function (c2802xadc): '<Root>/ADC2' */
+%<SLibCG_DumpSSCode("/*@[139c*/",tlcStartFcnOfS0B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B3)
+/* Start for S-Function (c2802xadc): '<Root>/ADC3' */
+%<SLibCG_DumpSSCode("/*@[139e*/",tlcStartFcnOfS0B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B4)
+/* Start for S-Function (c2802xadc): '<Root>/ADC4' */
+%<SLibCG_DumpSSCode("/*@[13a0*/",tlcStartFcnOfS0B4,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B5)
+/* Start for S-Function (c2802xpwm): '<Root>/ePWM1' */
+%<SLibCG_DumpSSCode("/*@[13a2*/",tlcStartFcnOfS0B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B6)
+/* Start for S-Function (c2802xpwm): '<Root>/ePWM2' */
+%<SLibCG_DumpSSCode("/*@[13a4*/",tlcStartFcnOfS0B6,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B7)
+/* Start for S-Function (c2802xpwm): '<Root>/ePWM' */
+%<SLibCG_DumpSSCode("/*@[13a6*/",tlcStartFcnOfS0B7,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B8)
+/* Start for S-Function (c2802xpwm): '<Root>/ePWM3' */
+%<SLibCG_DumpSSCode("/*@[13a7*/",tlcStartFcnOfS0B8,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B9)
+/* Start for S-Function (c2802xpwm): '<Root>/ePWM4' */
+%<SLibCG_DumpSSCode("/*@[13a8*/",tlcStartFcnOfS0B9,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(0, "Start", "Trailer")>\
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

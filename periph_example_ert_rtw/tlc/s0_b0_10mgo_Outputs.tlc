@@ -1,0 +1,83 @@
+%implements s0_b0_10mgo_Outputs "C"
+
+%function Outputs(block, system) Output
+%<SLibCGIRAccessLocalVar(0, 0)> %% rtb_SineWave2
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+real_T rtb_SineWave2_tmp;
+%closefile localVarDecl
+%assign tlcOutputsFcnOfS0B0 = OpaqueTLCBlockFcn("Outputs", 0, 0, 0, 0)
+%assign tlcOutputsFcnOfS0B1 = OpaqueTLCBlockFcn("Outputs", 0, 1, 0, 0)
+%assign tlcOutputsFcnOfS0B2 = OpaqueTLCBlockFcn("Outputs", 0, 2, 0, 0)
+%assign tlcOutputsFcnOfS0B3 = OpaqueTLCBlockFcn("Outputs", 0, 3, 0, 0)
+%assign tlcOutputsFcnOfS0B4 = OpaqueTLCBlockFcn("Outputs", 0, 4, 0, 0)
+%assign tlcOutputsFcnOfS0B5 = OpaqueTLCBlockFcn("Outputs", 0, 5, 0, 0)
+%assign tlcOutputsFcnOfS0B6 = OpaqueTLCBlockFcn("Outputs", 0, 6, 0, 0)
+%assign tlcOutputsFcnOfS0B7 = OpaqueTLCBlockFcn("Outputs", 0, 7, 0, 0)
+%assign tlcOutputsFcnOfS0B8 = OpaqueTLCBlockFcn("Outputs", 0, 8, 0, 0)
+%assign tlcOutputsFcnOfS0B9 = OpaqueTLCBlockFcn("Outputs", 0, 9, 0, 0)
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B0)
+/* S-Function (c2802xadc): '<Root>/ADC' */
+%<SLibCG_DumpSSCode("/*@[1370*/",tlcOutputsFcnOfS0B0,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B1)
+/* S-Function (c2802xadc): '<Root>/ADC1' */
+%<SLibCG_DumpSSCode("/*@[1372*/",tlcOutputsFcnOfS0B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B2)
+/* S-Function (c2802xadc): '<Root>/ADC2' */
+%<SLibCG_DumpSSCode("/*@[1374*/",tlcOutputsFcnOfS0B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B3)
+/* S-Function (c2802xadc): '<Root>/ADC3' */
+%<SLibCG_DumpSSCode("/*@[1376*/",tlcOutputsFcnOfS0B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B4)
+/* S-Function (c2802xadc): '<Root>/ADC4' */
+%<SLibCG_DumpSSCode("/*@[1378*/",tlcOutputsFcnOfS0B4,"/*@]*/")>\
+%endif
+/* Sin: '<Root>/Sine Wave' incorporates:
+ *  Sin: '<Root>/Sine Wave1'
+ *  Sin: '<Root>/Sine Wave2'
+ */
+/*@>f10*/rtb_SineWave2_tmp/*@>f12*/ = /*@>d85*/314.0/*@>e36*/ * %<SLibCG_DumpSSCode("/*@[1379*/",(SLibCG_SE(LibGetTaskTime(0))),"/*@]*/")>;
+/*@>d79*/rtb_SineWave2/*@>5c4*/ = /*@>10aa*/sin(/*@>f14*/rtb_SineWave2_tmp)/*@>e32*/ * /*@>d86*/32000.0/*@>5c2*/ + /*@>d87*/16000.0;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B5)
+/* S-Function (c2802xpwm): '<Root>/ePWM1' */
+%<SLibCG_DumpSSCode("/*@[137d*/",tlcOutputsFcnOfS0B5,"/*@]*/")>\
+%endif
+/* Sin: '<Root>/Sine Wave1' */
+/*@>d7e*/rtb_SineWave2/*@>5df*/ = /*@>10ae*/sin(rtb_SineWave2_tmp/*@>5d5*/ + /*@>d89*/0.33333333333333331)/*@>e2a*/ * /*@>d8a*/32000.0/*@>5dd*/ + /*@>d8b*/16000.0;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B6)
+/* S-Function (c2802xpwm): '<Root>/ePWM2' */
+%<SLibCG_DumpSSCode("/*@[137f*/",tlcOutputsFcnOfS0B6,"/*@]*/")>\
+%endif
+/* Sin: '<Root>/Sine Wave2' */
+/*@>d83*/rtb_SineWave2/*@>5fa*/ = /*@>10b2*/sin(rtb_SineWave2_tmp/*@>5f0*/ + /*@>d8d*/-0.33333333333333331)/*@>e22*/ * /*@>d8e*/32000.0/*@>5f8*/ + /*@>d8f*/16000.0;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B7)
+/* S-Function (c2802xpwm): '<Root>/ePWM' */
+%<SLibCG_DumpSSCode("/*@[1381*/",tlcOutputsFcnOfS0B7,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B8)
+/* S-Function (c2802xpwm): '<Root>/ePWM3' */
+%<SLibCG_DumpSSCode("/*@[1382*/",tlcOutputsFcnOfS0B8,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B9)
+/* S-Function (c2802xpwm): '<Root>/ePWM4' */
+%<SLibCG_DumpSSCode("/*@[1383*/",tlcOutputsFcnOfS0B9,"/*@]*/")>\
+%endif
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%endfunction
